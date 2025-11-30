@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Threat Intelligence Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Cyber Threat Intelligence Search</h1>
+    <p>BM25 & SENTENCE BERT</p>
+</div>
+
+<!-- SEARCH BAR -->
+<div class="search-container">
+    <form method="POST">
+        <input type="text" name="query" placeholder="Search threat intelligence..." required>
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<!-- RESULTS -->
+{% if result is not none %}
+
+    {% if result == "none" %}
+        <div class="no-result">
+            ❌ No relevant document found for your query.
+        </div>
+
+    {% else %}
+        <div class="best-match-card">
+            <h2>🔥 Best Match</h2>
+
+            <p><b>Title:</b> {{ result.title }}</p>
+            <p><b>Description:</b> {{ result.description }}</p>
+            <p><b>Tags:</b> {{ result.tags }}</p>
+            <p><b>Threat Type:</b> {{ result.threat_type }}</p>
+            <p><b>Severity:</b> {{ result.severity }}</p>
+
+            <p class="fulltext"><b>Full Text:</b><br>{{ result.full_text }}</p>
+        </div>
+    {% endif %}
+
+{% endif %}
+
+</body>
+</html>

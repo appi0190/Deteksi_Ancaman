@@ -1,0 +1,95 @@
+/* ---- GLOBAL STYLE ---- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* ---- HEADER ---- */
+.header {
+    text-align: center;
+    padding: 25px;
+    background: #d8e6f3;
+    border-bottom: 3px solid #b5ccdd;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1e4d72;
+}
+
+.header p {
+    color: #2d5f85;
+}
+
+/* ---- SEARCH ---- */
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-container form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    width: 350px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #aac7dd;
+    font-size: 16px;
+}
+
+.search-container button {
+    background: #1e5fa8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-container button:hover {
+    background: #144d85;
+}
+
+/* ---- BEST MATCH ---- */
+.best-match-card {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-left: 6px solid #1e5fa8;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.best-match-card h2 {
+    margin-top: 0;
+    color: #1e5fa8;
+}
+
+.fulltext {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ---- ERROR MESSAGE ---- */
+.no-result {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffe5e5;
+    border-left: 6px solid #d9534f;
+    border-radius: 12px;
+    color: #b30000;
+    text-align: center;
+    font-weight: bold;
+}
